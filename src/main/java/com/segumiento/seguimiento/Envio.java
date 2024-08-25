@@ -1,38 +1,33 @@
 package com.segumiento.seguimiento;
 
+import java.util.List;
+
 public class Envio {
-    private long id;
-    private String producto;
+    private int idEnvio;
     private String destino;
     private String estado;
     private String ubicacionActual;
+    private List<Producto> productos;
 
 
-    public Envio(long id, String producto, String destino, String estado, String ubicacionActual ){
-        this.id = id;
-        this.producto = producto;
+    public Envio(int idEnvio, String destino, String estado, String ubicacionActual, List<Producto> productos ){
+        this.idEnvio = idEnvio;
         this.destino = destino;
         this.estado = estado;
         this.ubicacionActual = ubicacionActual;
+        this.productos = productos;
 
     }
 
-    public Long getId() {
-        return id;
+    public int getIdEnvio() {
+        return idEnvio;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdEnvio(int idEnvio) {
+        this.idEnvio = idEnvio;
     }
 
-    public String getProducto() {
-        return producto;
-    }
-
-    public void setProducto(String producto) {
-        this.producto = producto;
-    }
-
+   
     public String getDestino() {
         return destino;
     }
@@ -57,4 +52,7 @@ public class Envio {
         this.ubicacionActual = ubicacionActual;
     }
     
+    public List<Producto> getProductos(){
+        return productos;
+    }
 }
