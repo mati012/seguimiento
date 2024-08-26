@@ -42,7 +42,7 @@ public class EnvioController{
     public String getEnvioEstadoById(@PathVariable int idEnvio  ) {
        for (Envio envio: envios){
         if (envio.getIdEnvio()== idEnvio){
-            return"La ubicación actual del pedido con orden "+ envio.getIdEnvio()+" es: " + envio.getUbicacionActual();
+            return  envio.getUbicacionActual();
         }
        }
     return null;
